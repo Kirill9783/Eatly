@@ -1,0 +1,20 @@
+.swiper {
+
+  &-wrapper {
+    padding: 0 0 35px;
+  }
+
+  &-pagination {
+    text-align: right;
+  }
+
+  &-pagination-bullet {
+    width: 190px;
+    height: 11px;
+    border-radius: 50px;
+
+    @include vp-1023 {
+      width: 130px;
+    }
+  }
+}

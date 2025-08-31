@@ -1,0 +1,76 @@
+.dishes {
+  padding: 100px 0 120px;
+  border-bottom: 1px solid $color-very-light-grey;
+
+  @include vp-1023 {
+    padding: 70px 0 85px;
+  }
+
+  &__wrapper {
+
+  }
+
+  &__title {
+    font-family: $ff-poppins;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 25px;
+    color: $color-revolver;
+    text-align: center;
+    margin: 0 0 85px;
+
+    @include vp-1023 {
+      font-size: 35px;
+      margin: 0 0 55px;
+    }
+
+    &--dishes {
+      color: $color-blue-marguerite;
+    }
+  }
+
+  &__list {
+    margin: 0 0 65px;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (max-width: 1230px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include vp-1023 {
+      margin: 0 0 50px;
+      gap: 22px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include vp-767 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    @media (max-width: 410px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-family: $ff-poppins;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 45px;
+    letter-spacing: -0.1px;
+    color: $color-mischka;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+
+  &__arrow {
+    width: 20px;
+    height: 20px;
+  }
+}

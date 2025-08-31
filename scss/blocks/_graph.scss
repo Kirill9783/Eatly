@@ -1,0 +1,122 @@
+.graph {
+  width: 209px;
+  height: 206px;
+  border-radius: 17px;
+  background-color: $color-white;
+  padding: 13px 0 11px;
+  box-shadow: 14.12px 18.83px 37.65px 0 $color-black-russian-15;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include vp-1023 {
+    padding: 9px 0 7px;
+    border-radius: 12px;
+    width: 147px;
+    height: 146px;
+  }
+
+  &__period-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 8px;
+
+    @include vp-1023 {
+      gap: 5px;
+    }
+  }
+
+  &__2d-list {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 23px;
+
+    @include vp-1023 {
+      gap: 16px;
+    }
+  }
+
+  &__square-lines {
+    background-color: $color-blue-marguerite;
+    border-radius: 1px;
+    height: 1px;
+    position: relative;
+    width: 100%;
+    opacity: 0.09;
+    display: block;
+
+    &::before,
+    &::after {
+      background-color: $color-blue-marguerite;
+      border-radius: 1px;
+      content: "";
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      top: -26px;
+      transform: translate(-50%, 0);
+      width: 100%;
+    }
+
+    &::after {
+      top: 26px;
+    }
+  }
+
+  &__curve {
+    position: absolute;
+    width: 209px;
+    height: 100px;
+    top: 50px;
+    left: 0;
+
+    @include vp-1023 {
+      width: 147px;
+      height: 69px;
+      top: 35px;
+    }
+  }
+
+  &__point {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 70px;
+    right: 32px;
+
+    @include vp-1023 {
+      width: 7px;
+      height: 7px;
+      top: 43px;
+    }
+  }
+
+  &__sum {
+    display: block;
+    position: absolute;
+    top: 55px;
+    right: 7px;
+    padding: 2px;
+    background-color: $color-blue-marguerite;
+    color: $color-white;
+    text-align: center;
+    font-family: $ff-poppins;
+    font-weight: 600;
+    font-size: 6px;
+    line-height: 100%;
+    border-radius: 17px;
+    width: 26px;
+
+    @include vp-1023 {
+      font-size: 4px;
+      width: 18px;
+      padding: 1.3px;
+      top: 35px;
+      right: 10px;
+    }
+  }
+}

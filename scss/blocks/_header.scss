@@ -1,0 +1,82 @@
+.header {
+  padding: 25px 0 25px;
+  background-color: $color-white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  border-bottom: 1px solid $color-very-light-grey;
+
+  @include vp-1023 {
+    padding: 18px 0 18px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @include vp-767 {
+      justify-content: space-between;
+    }
+  }
+
+  &__logo-link {
+    display: flex;
+    align-items: center;
+    margin: 0 100px 0 0;
+    outline: none;
+    transition: transform $transition-300;
+
+    &:hover,
+    &:focus-visible {
+      transform: scale(1.05);
+    }
+
+    @include vp-1023 {
+      margin: 0 73px 0 0;
+    }
+  }
+
+  &__logo {
+    width: 112px;
+    height: 42px;
+
+    @include vp-1023 {
+      width: 80px;
+      height: 30px;
+    }
+  }
+
+  &__main-nav {
+    margin: 0 20px 0 0;
+  }
+
+  &__login {
+    display: flex;
+    margin: 0 0 0 auto;
+    gap: 10px;
+    align-items: center;
+
+    @include vp-1023 {
+      gap: 6px;
+    }
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    @include vp-767 {
+      display: flex;
+    }
+  }
+
+  &__burger-link {
+    border: none;
+    background-color: transparent;
+  }
+}

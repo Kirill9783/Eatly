@@ -1,0 +1,156 @@
+.dishes-card {
+  background-color: $color-white;
+  border-radius: 35px;
+  box-shadow: 5.95px 71.35px 35.67px 0 $color-whisper-70;
+  border: 1px solid $color-ghost-white;
+  overflow: hidden;
+  height: 100%;
+  transition: transform $transition-300;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.1);
+  }
+
+  &__image {
+    padding: 17px 17px 0;
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__inner {
+    padding: 5px 27px 23px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include vp-1023 {
+      padding: 5px 20px 21px 16px;
+    }
+  }
+
+  &__tag {
+    margin: 0 0 5px;
+
+    @include vp-1023 {
+      margin: 0 0 3px;
+    }
+  }
+
+  &__name {
+    margin: 0 0 5px;
+    font-family: $ff-poppins;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 37px;
+    color: $color-revolver;
+
+    @include vp-1023 {
+      font-size: 17px;
+      margin: 0 0 3px;
+    }
+  }
+
+  &__middle {
+    display: flex;
+    margin: 0 0 10px;
+
+    @include vp-1023 {
+      margin: 0 0 5px;
+    }
+  }
+
+  &__text {
+    font-family: $ff-manrope;
+    font-size: 20px;
+    line-height: 25px;
+    color: $color-manatee;
+    margin: 0 7px 0 0;
+
+    @include vp-1023 {
+      font-size: 12px;
+    }
+  }
+
+  &__icon {
+    width: 25px;
+    height: 25px;
+    margin: 0 7px 0 0;
+
+    @include vp-1023 {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    position: relative;
+    margin: auto 0 0;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__cost {
+    font-family: $ff-manrope;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 40px;
+    color: $color-revolver;
+    margin: 0;
+
+    @include vp-1023 {
+      font-size: 18px;
+    }
+
+    &--cent {
+      font-size: 19px;
+      color: $color-manatee;
+
+      @include vp-1023 {
+        font-size: 13px;
+      }
+    }
+  }
+
+  &__plus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-revolver;
+    width: 44px;
+    height: 44px;
+    border-radius: 9px;
+    border: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+
+    @include vp-1023 {
+      width: 31px;
+      height: 31px;
+      position: static;
+    }
+  }
+
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__like {
+    width: 22px;
+    height: 19px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}

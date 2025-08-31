@@ -1,0 +1,101 @@
+.sale {
+  margin: 0 0 100px;
+
+  @include vp-1023 {
+    margin: 0 0 150px;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 40px 65px;
+    border-radius: 11px;
+    background-size: cover;
+    background-color: $color-blue-marguerite;
+    background-image: url("/images/sale/sale-bg.jpg");
+
+    @media (max-width: 850px) {
+      padding: 35px 27px 95px;
+    }
+  }
+
+  &__title {
+    font-family: $ff-poppins;
+    font-weight: 800;
+    font-size: 70px;
+    margin: 0 0 20px;
+    
+    @media (max-width: 850px) {
+      text-align: center;
+      font-size: 41px;
+    }
+  }
+
+  &__form {
+    position: relative;
+    display: inline-block;
+
+    @media (max-width: 850px) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    padding: 22px 160px 22px 22px;
+    border-radius: 15px;
+    width: 440px;
+    height: 68px;
+    background-color: $color-white;
+    box-shadow: 0 7.25px 45.33px 0 $color-black-10;
+    font-family: $ff-poppins;
+    color: $color-black-russian;
+    font-size: 16px;
+    letter-spacing: 0.03em;
+    border: none;
+
+    @media (max-width: 850px) {
+      width: 100%;
+      height: 50px;
+      padding: 22px 110px 22px 22px;
+    }
+
+    @media (max-width: 440px) {
+      padding: 22px;
+    }
+
+    &::placeholder {
+      color: $color-grey;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 440px) {
+      right: unset;
+      left: 0;
+      top: 75px;
+    }
+  }
+
+  &__img {
+    width: 275px;
+    height: 275px;
+    position: absolute;
+    right: 70px;
+    bottom: -100px;
+
+    @media (max-width: 991px) {
+      width: 220px;
+      height: 220px;
+    }
+
+    @media (max-width: 850px) {
+      right: 50%;
+      transform: translateX(50%);
+      bottom: -60%;
+    }
+  }
+}

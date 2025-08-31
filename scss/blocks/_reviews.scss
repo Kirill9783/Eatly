@@ -1,0 +1,16 @@
+.reviews {
+  padding: 100px 0 120px;
+
+  &__title {
+    font-family: $ff-poppins;
+    font-weight: 600;
+    font-size: 45px;
+    color: $color-revolver;
+    text-align: center;
+    margin: 0 0 80px;
+
+    &--reviews {
+      color: $color-blue-marguerite;
+    }
+  }
+}
