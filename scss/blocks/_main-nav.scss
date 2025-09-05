@@ -83,6 +83,12 @@
       color: $color-blue-marguerite;
     }
 
+    &--active {
+      color: $color-blue-marguerite;
+      pointer-events: none;
+      cursor: default;
+    }
+
     &--footer {
       color: $color-nobel;
     }

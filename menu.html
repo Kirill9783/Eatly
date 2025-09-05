@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Описание">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" defer src="js/menu.js"></script>
+    <title>Menu - Eatly</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__wrapper">
+            <a class="header__logo-link" href="index.html" target="_blank" aria-label="Ссылка на главную страницу">
+                <svg class="header__logo" width="112" height="42" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#logo-icon"></use>
+                </svg>
+            </a>
+            <div class="main-nav header__main-nav">
+                <div class="main-nav__inner">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item">
+                            <a href="menu.html" class="main-nav__link main-nav__link--active" target="_blank">
+                                Menu
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Blog
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Pricing
+                            </a>
+                        </li>
+                        <li class="main-nav__item">
+                            <a href="#" class="main-nav__link">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__login">
+                <button class="btn btn--login header__btn-login">Login</button>
+                <button class="btn btn--sign header__btn-sign">Sign up</button>
+            </div>
+            <div class="header__burger">
+                <button class="header__burger-link burger" type="button" aria-label="Открыть меню">
+                    <span class="burger__menu"></span>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="search">
+        <div class="container">
+            <h1 class="visually-hidden">Our menu</h1>
+            <div class="search__wrapper">
+                <div class="search__left">
+                    <div class="sale sale--search">
+                        <div class="sale__inner">
+                            <h2 class="sale__title">50% OFF</h2>
+                            <p class="sale__subtitle">WEEKENDS</p>
+                            <img class="sale__img" src="images/enjoy/enjoy-food-img.png" width="430" height="445"
+                                 alt="Food image">
+                            <svg class="sale__lines" width="56" height="62" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#quality-lines-icon"></use>
+                            </svg>
+                        </div>
+                    </div>
+                    <form class="search__form" action="#">
+                        <div class="custom-search">
+                            <input class="custom-search__field" type="search" aria-label="Search area"
+                                   name="search-field" placeholder="Search" autocomplete="off">
+                            <svg class="custom-search__icon" width="35" height="35" aria-hidden="true">
+                                <use xlink:href="images/sprite.svg#search-icon"></use>
+                            </svg>
+                        </div>
+                        <div class="search__form-radio">
+                            <div class="custom-radio">
+                                <input class="custom-radio__field visually-hidden" type="radio" id="radio-food"
+                                       name="radio-radio">
+                                <label class="custom-radio__label" for="radio-food">
+                                    <span class="custom-radio__text">Food</span>
+                                </label>
+                            </div>
+                            <div class="custom-radio">
+                                <input class="custom-radio__field visually-hidden" type="radio" id="radio-restaurant"
+                                       name="radio-radio" checked>
+                                <label class="custom-radio__label" for="radio-restaurant">
+                                    <span class="custom-radio__text">Restaurant</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="search__right">
+                    <div class="filter-card">
+                        <form class="filter-card__form" action="#">
+                            <fieldset class="filter-card__fieldset">
+                                <legend class="filter-card__legend">Category</legend>
+                                <div class="filter-card__list filter-card__list--category">
+                                    <div class="custom-input">
+                                        <input class="custom-input__field visually-hidden" type="checkbox" id="pizza"
+                                               name="category" value="pizza">
+                                        <label class="custom-input__label custom-input__label--golden" for="pizza">
+                                            <svg class="custom-input__icon" width="36" height="36" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#pizza-icon"></use>
+                                            </svg>
+                                            <span class="custom-input__name">Pizza</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-input">
+                                        <input checked class="custom-input__field visually-hidden" type="checkbox"
+                                               id="hotdog"
+                                               name="category" value="hotdog">
+                                        <label class="custom-input__label custom-input__label--pink" for="hotdog">
+                                            <svg class="custom-input__icon" width="51" height="51" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#hotdog-icon"></use>
+                                            </svg>
+                                            <span class="custom-input__name">Asian</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-input">
+                                        <input class="custom-input__field visually-hidden" type="checkbox" id="doughnut"
+                                               name="category" value="doughnut">
+                                        <label class="custom-input__label custom-input__label--harvest" for="doughnut">
+                                            <svg class="custom-input__icon" width="36" height="36" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#doughnut-icon"></use>
+                                            </svg>
+                                            <span class="custom-input__name">Donat</span>
+                                        </label>
+                                    </div>
+                                    <div class="custom-input">
+                                        <input class="custom-input__field visually-hidden" type="checkbox" id="icecream"
+                                               name="category" value="icecream">
+                                        <label class="custom-input__label custom-input__label--cornflower"
+                                               for="icecream">
+                                            <svg class="custom-input__icon" width="23" height="42" aria-hidden="true">
+                                                <use xlink:href="images/sprite.svg#icecream-icon"></use>
+                                            </svg>
+                                            <span class="custom-input__name">Ice</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="filter-card__fieldset">
+                                <legend class="filter-card__legend">Sort By</legend>
+                                <div class="filter-card__list filter-card__list--sort">
+                                    <div class="custom-input">
+                                        <input class="custom-input__field visually-hidden" type="checkbox"
+                                               id="recommended"
+                                               name="sort" value="recommended">
+                                        <label class="custom-input__label-sort" for="recommended">Recommended</label>
+                                    </div>
+                                    <div class="custom-input">
+                                        <input class="custom-input__field visually-hidden" type="checkbox" id="fast"
+                                               name="sort" value="fast" checked>
+                                        <label class="custom-input__label-sort" for="fast">Fast Delivery</label>
+                                    </div>
+                                    <div class="custom-input">
+                                        <input class="custom-input__field visually-hidden" type="checkbox" id="popular"
+                                               name="sort" value="popular">
+                                        <label class="custom-input__label-sort" for="popular">Most Popular</label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <fieldset class="filter-card__fieldset">
+                                <legend class="filter-card__legend">Price</legend>
+                                <div class="filter-card__list filter-card__list--price">
+                                    <div class="custom-range">
+                                        <input class="custom-range__range" type="range" id="price" min="0" max="100"
+                                               step="10" value="20">
+                                        <label class="custom-range__label" for="price">
+                                            <span>$0</span>
+                                            <span>$10</span>
+                                            <span>$30</span>
+                                            <span>$40</span>
+                                            <span>$50</span>
+                                            <span>$60</span>
+                                            <span>$70</span>
+                                            <span>$80</span>
+                                            <span>$90</span>
+                                            <span>$100</span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="restaurants restaurants--search">
+        <div class="container">
+            <div class="restaurants__wrapper">
+                <div class="restaurants__header">
+                    <h2 class="restaurants__title">Our Top <span
+                            class="restaurants__title restaurants__title--restaurants">Restaurants</span>
+                    </h2>
+                    <a class="restaurants__link restaurants__link--top" href="#">
+                        View All
+                        <svg class="restaurants__arrow" width="28" height="28" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#arrow-right-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="restaurants__list">
+                    <li class="restaurants__item">
+                        <div class="product-card">
+                            <img class="product-card__img" src="images/restaurants/chicken-img.jpg" width="396"
+                                 height="177" alt="The Chicken King">
+                            <div class="product-card__inner">
+                                <span class="product-card__tag tag tag--yellow">Healthy</span>
+                                <h3 class="product-card__name">The Chicken King</h3>
+                                <div class="product-card__bottom">
+                                    <span class="product-card__text">24 min -</span>
+                                    <svg class="product-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="product-card__text">4.8</span>
+                                    <svg class="product-card__bookmark" width="41" height="41" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#bookmark-icon"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="restaurants__item">
+                        <div class="product-card">
+                            <img class="product-card__img" src="images/restaurants/burger-img.jpg" width="397"
+                                 height="177" alt="The Burger King">
+                            <div class="product-card__inner">
+                                <span class="product-card__tag tag tag--red">Trending</span>
+                                <h3 class="product-card__name">The Burger King</h3>
+                                <div class="product-card__bottom">
+                                    <span class="product-card__text">24 min -</span>
+                                    <svg class="product-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="product-card__text">4.9</span>
+                                    <svg class="product-card__bookmark" width="41" height="41" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#bookmark-icon"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="restaurants__item">
+                        <div class="product-card">
+                            <img class="product-card__img" src="images/restaurants/chicken-img.jpg" width="396"
+                                 height="177" alt="The Chicken King">
+                            <div class="product-card__inner">
+                                <span class="product-card__tag tag tag--yellow">Healthy</span>
+                                <h3 class="product-card__name">The Chicken King</h3>
+                                <div class="product-card__bottom">
+                                    <span class="product-card__text">24 min -</span>
+                                    <svg class="product-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="product-card__text">4.8</span>
+                                    <svg class="product-card__bookmark" width="41" height="41" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#bookmark-icon"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <a class="restaurants__link restaurants__link--bottom" href="#">
+                    View All
+                    <svg class="restaurants__arrow" width="28" height="28" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#arrow-right-icon"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="dishes dishes--search">
+        <div class="container">
+            <div class="dishes__wrapper">
+                <div class="dishes__header">
+                    <h2 class="dishes__title">Our Top <span class="dishes__title dishes__title--dishes">Dishes</span>
+                    </h2>
+                    <a class="dishes__link dishes__link--top" href="#">
+                        View All
+                        <svg class="dishes__arrow" width="28" height="28" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#arrow-right-icon"></use>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="dishes__list">
+                    <li class="dishes__item">
+                        <div class="dishes-card">
+                            <div class="dishes-card__image">
+                                <img class="dishes-card__img" src="images/dishes/chicken-dishes-img.png" width="202"
+                                     height="210" alt="Chicken dishes image">
+                            </div>
+                            <div class="dishes-card__inner">
+                                <span class="dishes-card__tag tag tag--yellow">Healthy</span>
+                                <h3 class="dishes-card__name">Chicken Hell</h3>
+                                <div class="dishes-card__middle">
+                                    <span class="dishes-card__text">24 min -</span>
+                                    <svg class="dishes-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="dishes-card__text">4.8</span>
+                                </div>
+                                <div class="dishes-card__bottom">
+                                    <p class="dishes-card__cost">$12<span
+                                            class="dishes-card__cost dishes-card__cost--cent">.99</span></p>
+                                    <button type="button" class="dishes-card__plus">
+                                        <svg class="dishes-card__icon-plus" width="16" height="16" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#plus-icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="dishes-card__btn">
+                                <svg class="dishes-card__like" width="22" height="19" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#heart-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="dishes__item">
+                        <div class="dishes-card">
+                            <div class="dishes-card__image">
+                                <img class="dishes-card__img" src="images/dishes/sve-dishes-img.png" width="186"
+                                     height="186" alt="Chicken dishes image">
+                            </div>
+                            <div class="dishes-card__inner">
+                                <span class="dishes-card__tag tag tag--red">Trending</span>
+                                <h3 class="dishes-card__name">Sve Dish</h3>
+                                <div class="dishes-card__middle">
+                                    <span class="dishes-card__text">34 min -</span>
+                                    <svg class="dishes-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="dishes-card__text">4.9</span>
+                                </div>
+                                <div class="dishes-card__bottom">
+                                    <p class="dishes-card__cost">$19<span
+                                            class="dishes-card__cost dishes-card__cost--cent">.99</span></p>
+                                    <button type="button" class="dishes-card__plus">
+                                        <svg class="dishes-card__icon-plus" width="16" height="16" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#plus-icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="dishes-card__btn">
+                                <svg class="dishes-card__like" width="22" height="19" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#heart-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="dishes__item">
+                        <div class="dishes-card">
+                            <div class="dishes-card__image">
+                                <img class="dishes-card__img" src="images/dishes/dish-dishes-img.png" width="186"
+                                     height="187" alt="Fish Hell Veg image">
+                            </div>
+                            <div class="dishes-card__inner">
+                                <span class="dishes-card__tag tag tag--green">Supreme</span>
+                                <h3 class="dishes-card__name">Fish Hell Veg</h3>
+                                <div class="dishes-card__middle">
+                                    <span class="dishes-card__text">34 min -</span>
+                                    <svg class="dishes-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="dishes-card__text">4.9</span>
+                                </div>
+                                <div class="dishes-card__bottom">
+                                    <p class="dishes-card__cost">$19<span
+                                            class="dishes-card__cost dishes-card__cost--cent">.99</span></p>
+                                    <button type="button" class="dishes-card__plus">
+                                        <svg class="dishes-card__icon-plus" width="16" height="16" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#plus-icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="dishes-card__btn">
+                                <svg class="dishes-card__like" width="22" height="19" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#heart-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="dishes__item">
+                        <div class="dishes-card">
+                            <div class="dishes-card__image">
+                                <img class="dishes-card__img" src="images/dishes/chicken-dishes-img.png" width="202"
+                                     height="210" alt="Chicken dishes image">
+                            </div>
+                            <div class="dishes-card__inner">
+                                <span class="dishes-card__tag tag tag--yellow">Healthy</span>
+                                <h3 class="dishes-card__name">Chicken Hell</h3>
+                                <div class="dishes-card__middle">
+                                    <span class="dishes-card__text">24 min -</span>
+                                    <svg class="dishes-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="dishes-card__text">4.8</span>
+                                </div>
+                                <div class="dishes-card__bottom">
+                                    <p class="dishes-card__cost">$12<span
+                                            class="dishes-card__cost dishes-card__cost--cent">.99</span></p>
+                                    <button type="button" class="dishes-card__plus">
+                                        <svg class="dishes-card__icon-plus" width="16" height="16" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#plus-icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="dishes-card__btn">
+                                <svg class="dishes-card__like" width="22" height="19" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#heart-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="dishes__item">
+                        <div class="dishes-card">
+                            <div class="dishes-card__image">
+                                <img class="dishes-card__img" src="images/dishes/sve-dishes-img.png" width="186"
+                                     height="186" alt="Chicken dishes image">
+                            </div>
+                            <div class="dishes-card__inner">
+                                <span class="dishes-card__tag tag tag--red">Trending</span>
+                                <h3 class="dishes-card__name">Sve Dish</h3>
+                                <div class="dishes-card__middle">
+                                    <span class="dishes-card__text">34 min -</span>
+                                    <svg class="dishes-card__icon" width="26" height="27" aria-hidden="true">
+                                        <use xlink:href="images/sprite.svg#star-blue-icon"></use>
+                                    </svg>
+                                    <span class="dishes-card__text">4.9</span>
+                                </div>
+                                <div class="dishes-card__bottom">
+                                    <p class="dishes-card__cost">$19<span
+                                            class="dishes-card__cost dishes-card__cost--cent">.99</span></p>
+                                    <button type="button" class="dishes-card__plus">
+                                        <svg class="dishes-card__icon-plus" width="16" height="16" aria-hidden="true">
+                                            <use xlink:href="images/sprite.svg#plus-icon"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <button class="dishes-card__btn">
+                                <svg class="dishes-card__like" width="22" height="19" aria-hidden="true">
+                                    <use xlink:href="images/sprite.svg#heart-icon"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                <a class="dishes__link dishes__link--bottom" href="#">
+                    View All
+                    <svg class="dishes__arrow" width="28" height="28" aria-hidden="true">
+                        <use xlink:href="images/sprite.svg#arrow-right-icon"></use>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="faq">
+        <div class="container">
+            <h2 class="faq__title">
+                Frequently Asked <span class="faq__title faq__title--faq">Questions</span>
+                <svg class="faq__lines" width="56" height="62" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#quality-lines-icon"></use>
+                </svg>
+            </h2>
+            <div class="faq__accordion accordion">
+                <div class="accordion__element">
+                    <button class="accordion__btn" type="button">
+                        <span class="accordion__btn-text">How long does delivery take?</span>
+                        <span class="accordion__btn-icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                        <div class="accordion__inner">
+                            <div class="accordion__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur
+                                    illo laborum minima odit officia pariatur soluta voluptatem! Ducimus eligendi est et
+                                    expedita itaque rerum temporibus voluptatibus voluptatum. Cumque eum, laboriosam!
+                                    Alias autem cupiditate debitis doloribus eligendi eveniet facilis illo modi
+                                    reiciendis vel! A dignissimos dolor omnis quaerat veniam! Accusamus blanditiis,
+                                    dignissimos earum eos eveniet iusto labore, minima minus molestias necessitatibus
+                                    omnis perspiciatis quam quos rem, tempore. Blanditiis dolorem ipsa minus mollitia,
+                                    nisi obcaecati omnis possimus quidem ratione recusandae reiciendis rerum, voluptate
+                                    voluptatibus! Accusamus architecto aut cumque earum eligendi, est et ex facilis
+                                    incidunt, maxime pariatur reiciendis rem reprehenderit vitae?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__element">
+                    <button class="accordion__btn" type="button">
+                        <span class="accordion__btn-text">How Does It Work ?</span>
+                        <span class="accordion__btn-icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                        <div class="accordion__inner">
+                            <div class="accordion__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur
+                                    illo laborum minima odit officia pariatur soluta voluptatem! Ducimus eligendi est et
+                                    expedita itaque rerum temporibus voluptatibus voluptatum. Cumque eum, laboriosam!
+                                    Alias autem cupiditate debitis doloribus eligendi eveniet facilis illo modi
+                                    reiciendis vel! A dignissimos dolor omnis quaerat veniam! Accusamus blanditiis,
+                                    dignissimos earum eos eveniet iusto labore, minima minus molestias necessitatibus
+                                    omnis perspiciatis quam quos rem, tempore. Blanditiis dolorem ipsa minus mollitia,
+                                    nisi obcaecati omnis possimus quidem ratione recusandae reiciendis rerum, voluptate
+                                    voluptatibus! Accusamus architecto aut cumque earum eligendi, est et ex facilis
+                                    incidunt, maxime pariatur reiciendis rem reprehenderit vitae?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__element">
+                    <button class="accordion__btn" type="button">
+                        <span class="accordion__btn-text">How does your food delivery service work?</span>
+                        <span class="accordion__btn-icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                        <div class="accordion__inner">
+                            <div class="accordion__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur
+                                    illo laborum minima odit officia pariatur soluta voluptatem! Ducimus eligendi est et
+                                    expedita itaque rerum temporibus voluptatibus voluptatum. Cumque eum, laboriosam!
+                                    Alias autem cupiditate debitis doloribus eligendi eveniet facilis illo modi
+                                    reiciendis vel! A dignissimos dolor omnis quaerat veniam! Accusamus blanditiis,
+                                    dignissimos earum eos eveniet iusto labore, minima minus molestias necessitatibus
+                                    omnis perspiciatis quam quos rem, tempore. Blanditiis dolorem ipsa minus mollitia,
+                                    nisi obcaecati omnis possimus quidem ratione recusandae reiciendis rerum, voluptate
+                                    voluptatibus! Accusamus architecto aut cumque earum eligendi, est et ex facilis
+                                    incidunt, maxime pariatur reiciendis rem reprehenderit vitae?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__element">
+                    <button class="accordion__btn" type="button">
+                        <span class="accordion__btn-text">What payment options do you accept?</span>
+                        <span class="accordion__btn-icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                        <div class="accordion__inner">
+                            <div class="accordion__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur
+                                    illo laborum minima odit officia pariatur soluta voluptatem! Ducimus eligendi est et
+                                    expedita itaque rerum temporibus voluptatibus voluptatum. Cumque eum, laboriosam!
+                                    Alias autem cupiditate debitis doloribus eligendi eveniet facilis illo modi
+                                    reiciendis vel! A dignissimos dolor omnis quaerat veniam! Accusamus blanditiis,
+                                    dignissimos earum eos eveniet iusto labore, minima minus molestias necessitatibus
+                                    omnis perspiciatis quam quos rem, tempore. Blanditiis dolorem ipsa minus mollitia,
+                                    nisi obcaecati omnis possimus quidem ratione recusandae reiciendis rerum, voluptate
+                                    voluptatibus! Accusamus architecto aut cumque earum eligendi, est et ex facilis
+                                    incidunt, maxime pariatur reiciendis rem reprehenderit vitae?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__element">
+                    <button class="accordion__btn" type="button">
+                        <span class="accordion__btn-text">Do you offer discounts or promotions?</span>
+                        <span class="accordion__btn-icon"></span>
+                    </button>
+                    <div class="accordion__content">
+                        <div class="accordion__inner">
+                            <div class="accordion__text">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium consequatur
+                                    illo laborum minima odit officia pariatur soluta voluptatem! Ducimus eligendi est et
+                                    expedita itaque rerum temporibus voluptatibus voluptatum. Cumque eum, laboriosam!
+                                    Alias autem cupiditate debitis doloribus eligendi eveniet facilis illo modi
+                                    reiciendis vel! A dignissimos dolor omnis quaerat veniam! Accusamus blanditiis,
+                                    dignissimos earum eos eveniet iusto labore, minima minus molestias necessitatibus
+                                    omnis perspiciatis quam quos rem, tempore. Blanditiis dolorem ipsa minus mollitia,
+                                    nisi obcaecati omnis possimus quidem ratione recusandae reiciendis rerum, voluptate
+                                    voluptatibus! Accusamus architecto aut cumque earum eligendi, est et ex facilis
+                                    incidunt, maxime pariatur reiciendis rem reprehenderit vitae?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <a class="footer__logo-link" href="index.html" target="_blank" aria-label="Ссылка на главную страницу">
+                <svg class="footer__logo" width="112" height="42" aria-hidden="true">
+                    <use xlink:href="images/sprite.svg#logo-icon"></use>
+                </svg>
+            </a>
+            <ul class="footer__main-nav main-nav main-nav--footer main-nav__list">
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--footer">
+                        Blog
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--footer">
+                        Pricing
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--footer">
+                        About Us
+                    </a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="#" class="main-nav__link main-nav__link--footer">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                &copy;&nbsp;2023&nbsp;EATLY All Rights Reserved.
+            </p>
+            <ul class="footer__social social">
+                <li class="social__item">
+                    <a class="social__link" href="#" aria-label="Link to Instagram">
+                        <svg class="social__logo" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#instagram-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#" aria-label="Link to Instagram">
+                        <svg class="social__logo" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#in-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#" aria-label="Link to Instagram">
+                        <svg class="social__logo" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#facebook-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link" href="#" aria-label="Link to Instagram">
+                        <svg class="social__logo" width="22" height="22" aria-hidden="true">
+                            <use xlink:href="images/sprite.svg#twitter-icon"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

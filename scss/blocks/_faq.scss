@@ -1,0 +1,51 @@
+.faq {
+  padding: 180px 0 150px;
+
+  &__title {
+    font-family: $ff-poppins;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 120%;
+    color: $color-revolver;
+    text-align: center;
+    margin: 0 auto 85px;
+    width: 408px;
+    position: relative;
+
+    &--faq {
+      color: $color-blue-marguerite;
+    }
+
+    @include vp-1023 {
+      font-size: 35px;
+      margin: 0 auto 65px;
+
+      @include vp-767 {
+        text-align: left;
+        font-size: 30px;
+      }
+    }
+  }
+
+  &__lines {
+    position: absolute;
+    top: -35px;
+    right: -50px;
+    width: 41px;
+    height: 39px;
+    transform: rotate(330deg);
+
+    @include vp-1023 {
+      top: -20px;
+      right: 15px;
+      width: 29px;
+      height: 27px;
+    }
+
+    @include vp-767 {
+      right: 120px;
+      width: 21px;
+      height: 20px;
+    }
+  }
+}

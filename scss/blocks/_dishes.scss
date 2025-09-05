@@ -6,10 +6,6 @@
     padding: 70px 0 85px;
   }
 
-  &__wrapper {
-
-  }
-
   &__title {
     font-family: $ff-poppins;
     font-weight: 600;
@@ -72,5 +68,39 @@
   &__arrow {
     width: 20px;
     height: 20px;
+  }
+
+  &--search & {
+
+    &__title {
+      margin: 0;
+      font-size: 35px;
+    }
+
+    &__list {
+      margin: 0;
+    }
+
+    &__link--top {
+
+      @media (max-width: 550px) {
+        display: none;
+      }
+    }
+
+    &__link--bottom {
+      display: none;
+
+      @media (max-width: 550px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 65px;
   }
 }

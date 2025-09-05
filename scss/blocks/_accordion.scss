@@ -1,0 +1,151 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  $root: &;
+
+  &__element {
+    border-bottom: 1px solid rgba($color-black, 0.1);
+    padding: 0 0 24px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-align: left;
+    padding: 0 72px 0 0;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    &--active {
+      #{$root}__btn-icon::after {
+        opacity: 0;
+      }
+
+      + #{$root}__content {
+        display: flex;
+      }
+    }
+  }
+
+  &__btn-text {
+    font-size: 24px;
+    line-height: 59px;
+    font-family: $ff-poppins;
+    font-weight: 600;
+    color: $color-revolver;
+
+    @include vp-1023 {
+      font-size: 16px;
+      line-height: 42px;
+    }
+
+    @include vp-767 {
+      font-size: 12px;
+      line-height: 31px;
+    }
+  }
+
+  &__btn-icon {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: $color-blue-marguerite;
+    border-radius: 50%;
+
+    @include vp-1023 {
+      width: 22px;
+      height: 22px;
+    }
+
+    @include vp-767 {
+      width: 16px;
+      height: 16px;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      height: 2px;
+      width: 15px;
+      background-color: $color-white;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      @include vp-1023 {
+        width: 13px;
+      }
+
+      @include vp-767 {
+        width: 6px;
+        height: 1px;
+      }
+    }
+
+    &::after {
+      height: 15px;
+      width: 2px;
+      transition: opacity $transition-300;
+
+      @include vp-1023 {
+        height: 13px;
+      }
+
+      @include vp-767 {
+        width: 1px;
+        height: 6px;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+
+  &__inner {
+    padding: 12px 0 0;
+  }
+
+  &__text {
+    font-family: $ff-poppins;
+    font-size: 18px;
+    line-height: 28px;
+    color: $color-nobel;
+    text-align: justify;
+
+    @include vp-1023 {
+      font-size: 14px;
+      line-height: 26px;
+    }
+
+    @include vp-767 {
+      font-size: 11px;
+      line-height: 160%;
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+}

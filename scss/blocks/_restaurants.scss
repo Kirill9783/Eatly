@@ -63,6 +63,10 @@
     gap: 10px;
     justify-content: flex-end;
 
+    &--top {
+      display: none;
+    }
+
     @include vp-1023 {
       font-size: 15px;
     }
@@ -71,5 +75,40 @@
   &__arrow {
     width: 20px;
     height: 20px;
+  }
+
+  &--search & {
+
+    &__title {
+      margin: 0;
+      font-size: 35px;
+    }
+
+    &__list {
+      margin: 0;
+    }
+
+    &__link--top {
+      display: flex;
+
+      @media (max-width: 550px) {
+        display: none;
+      }
+    }
+
+    &__link--bottom {
+      display: none;
+
+      @media (max-width: 550px) {
+        display: flex;
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 65px;
   }
 }

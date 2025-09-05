@@ -1,0 +1,82 @@
+.custom-radio {
+  position: relative;
+  width: 100%;
+  border: 2px solid $color-blue-marguerite;
+  overflow: hidden;
+
+  &:first-child {
+    border-radius: 15px 0 0 15px;
+  }
+
+  &:last-child {
+    border-radius: 0 15px 15px 0;
+  }
+
+  &:not(:last-of-type) {
+    border-right: none;
+  }
+
+  &__field {
+    border-radius: 15px;
+    outline: none;
+
+    &:hover +.custom-radio__label .custom-radio__text,
+    &:focus-visible +.custom-radio__label .custom-radio__text {
+      color: $color-black-russian;
+    }
+  }
+
+  &__text {
+    font-family: $ff-poppins;
+    font-weight: 500;
+    font-size: 20px;
+    align-items: center;
+    text-align: center;
+    color: $color-blue-marguerite;
+    z-index: 10;
+
+    @include vp-1023 {
+      font-size: 14px;
+    }
+  }
+
+  &__label {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    user-select: none;
+    padding: 20px;
+    position: relative;
+    z-index: 10;
+
+    &::before {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    @include vp-1023 {
+      padding: 15px;
+    }
+  }
+
+  &__field:checked + .custom-radio__label::after {
+    background-color: $color-blue-marguerite;
+  }
+
+  &__field:checked + .custom-radio__label .custom-radio__text {
+    color: #FFFFFF;
+  }
+}
